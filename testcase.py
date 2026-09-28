@@ -852,6 +852,10 @@ class TestCase(object):
                 price_scenario = "HighlyDynamicBelgium2024"
             elif self.scenario["electricity_price"] == "highly_dynamic_ger_2024":
                 price_scenario = "HighlyDynamicGermany2024"
+            elif self.scenario["electricity_price"] == "highly_dynamic_ger_2025":
+                price_scenario = "HighlyDynamicGermany2025"
+            elif self.scenario["electricity_price"] == "highly_dynamic_bel_2025":
+                price_scenario = "HighlyDynamicBelgium2025"
             # Calculate the core kpis
             payload = self.cal.get_core_kpis(price_scenario=price_scenario)
         except:
@@ -1046,7 +1050,7 @@ class TestCase(object):
         Parameters
         ----------
         scenario : dict
-            {'electricity_price': <'constant' or 'dynamic' or 'highly_dynamic' or 'highly_dynamic_bel_2024' or 'highly_dynamic_ger_2024'>,
+            {'electricity_price': <'constant' or 'dynamic' or 'highly_dynamic' or 'highly_dynamic_bel_2024' or 'highly_dynamic_ger_2024' or 'highly_dynamic_ger_2025' or 'highly_dynamic_bel_2025'>,
              'time_period': see available <str> keys for test case,
              'temperature_uncertainty':<'low' or 'medium' or 'high'>,
              'solar_uncertainty':<'low' or 'medium' or 'high'>,
@@ -1118,11 +1122,13 @@ class TestCase(object):
                     "highly_dynamic",
                     "highly_dynamic_bel_2024",
                     "highly_dynamic_ger_2024",
+                    "highly_dynamic_ger_2025",
+                    "highly_dynamic_bel_2025",
                 ]:
                     status = 400
                     message = (
                         "Scenario parameter electricy_price is {}, "
-                        "but should be 'constant', 'dynamic', 'highly_dynamic', 'highly_dynamic_bel_2024', or 'highly_dynamic_ger_2024'.".format(
+                        "but should be 'constant', 'dynamic', 'highly_dynamic', 'highly_dynamic_bel_2024', 'highly_dynamic_ger_2024', 'highly_dynamic_ger_2025', or 'highly_dynamic_bel_2025'.".format(
                             scenario["electricity_price"]
                         )
                     )

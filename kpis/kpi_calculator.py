@@ -583,12 +583,14 @@ class KPI_Calculator(object):
         Parameters
         ----------
         scenario: string, optional
-            There are five different scenarios considered for electricity:
+            There are seven different scenarios considered for electricity:
             1. 'Constant': completely constant price
             2. 'Dynamic': day/night tariff
             3. 'HighlyDynamic': spot price changing every 15 minutes.
             4. 'HighlyDynamicBelgium2024': spot price for Belgium in 2024
             5. 'HighlyDynamicGermany2024': spot price for Germany in 2024
+            6. 'HighlyDynamicGermany2025': spot price for Germany in 2025
+            7. 'HighlyDynamicBelgium2025': spot price for Belgium in 2025
             Default is 'Constant'.
 
         Notes

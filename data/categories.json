@@ -114,6 +114,14 @@
             "Description": "Spot electricity price for Germany in 2024",
             "Unit": "($/Euro)/kWh"
         },
+        "PriceElectricPowerHighlyDynamicGermany2025": {
+            "Description": "Spot electricity price for Germany in 2025",
+            "Unit": "($/Euro)/kWh"
+        },
+        "PriceElectricPowerHighlyDynamicBelgium2025": {
+            "Description": "Spot electricity price for Belgium in 2025",
+            "Unit": "($/Euro)/kWh"
+        },
         "PriceGasPower": {
             "Description": "Price to produce 1 kWh thermal from gas",
             "Unit": "($/Euro)/kWh"
